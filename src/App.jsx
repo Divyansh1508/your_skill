@@ -10,7 +10,7 @@ import { useAuth } from "./contexts/AuthContext.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
-import About from "./pages/about.jsx";
+// import About from "./pages/about.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import Courses from "./pages/Courses.jsx";
@@ -69,14 +69,14 @@ function App() {
               </Layout>
             }
           />
-          <Route
+          {/* <Route
             path="/about"
             element={
               <Layout>
                 <About />
               </Layout>
             }
-          />
+          /> */}
           <Route
             path="/login"
             element={
