@@ -1,13 +1,18 @@
-import api from '../config/api.js';
+import api from "../config/api.js";
 
 export const courseService = {
   // Get all courses
   async getAllCourses() {
     try {
-      const response = await api.get('/courses');
+      const response = await api.get("/courses");
       return response.data;
     } catch (error) {
-      throw error.response?.data || { success: false, message: 'Failed to fetch courses' };
+      throw (
+        error.response?.data || {
+          success: false,
+          message: "Failed to fetch courses",
+        }
+      );
     }
   },
 
@@ -17,17 +22,27 @@ export const courseService = {
       const response = await api.get(`/courses/${courseId}`);
       return response.data;
     } catch (error) {
-      throw error.response?.data || { success: false, message: 'Failed to fetch course' };
+      throw (
+        error.response?.data || {
+          success: false,
+          message: "Failed to fetch course",
+        }
+      );
     }
   },
 
   // Get enrolled courses
   async getEnrolledCourses() {
     try {
-      const response = await api.get('/courses/enrolled/user');
+      const response = await api.get("/courses/enrolled/user");
       return response.data;
     } catch (error) {
-      throw error.response?.data || { success: false, message: 'Failed to fetch enrolled courses' };
+      throw (
+        error.response?.data || {
+          success: false,
+          message: "Failed to fetch enrolled courses",
+        }
+      );
     }
-  }
+  },
 };

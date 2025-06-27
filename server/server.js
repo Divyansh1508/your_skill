@@ -26,7 +26,7 @@ app.use(
     origin:
       process.env.NODE_ENV === "production"
         ? "your-production-domain.com"
-        : "http://localhost:5173",
+        : "https://your-skill-server.onrender.com",
     credentials: true,
   })
 );
@@ -174,6 +174,6 @@ app.use((error, req, res, next) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📱 Frontend URL: http://localhost:5173`);
-  console.log(`🔗 API URL: http://localhost:${PORT}/api`);
+  console.log(`📱 Frontend URL: https://your-skill-server.onrender.com`);
+  console.log(`🔗 API URL: https://your-skill-server.onrender.com/api`);
 });
